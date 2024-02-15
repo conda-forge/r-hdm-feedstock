@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/hdm_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/hdm/hdm_{{ version }}.tar.gz
-  sha256: ba087565e9e0a8ea30a6095919141895fd76b7f3c05a03e60e9e24e602732bce
+  sha256: 3354b22752f0aa0c0d9c8c12b38810202b6380f2587e539be11d9a358412fe6a
 
 build:
-  merge_build_host: True  # [win]
-  number: 4
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -46,14 +46,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=hdm
   license: MIT
-  summary: Implementation of selected high-dimensional statistical and econometric methods for
-    estimation and inference. Efficient estimators and uniformly valid confidence intervals
-    for various low-dimensional causal/ structural parameters are provided which appear
-    in high-dimensional approximately sparse models. Including functions for fitting
-    heteroscedastic robust Lasso regressions with non-Gaussian errors and for instrumental
-    variable (IV) and treatment effect estimation in a high-dimensional setting. Moreover,
-    the methods enable valid post-selection inference and rely on a theoretically grounded,
-    data-driven choice of the penalty. Chernozhukov, Hansen, Spindler (2016) <arXiv:1603.01700>.
+  summary: Implementation of selected high-dimensional statistical and econometric methods for estimation and inference. Efficient estimators and uniformly valid confidence intervals for various low-dimensional causal/ structural parameters are provided which appear in high-dimensional approximately sparse models. Including
+    functions for fitting heteroscedastic robust Lasso regressions with non-Gaussian errors and for instrumental variable (IV) and treatment effect estimation in a high-dimensional setting. Moreover, the methods enable valid post-selection inference and rely on a theoretically grounded, data-driven choice of the penalty.
+    Chernozhukov, Hansen, Spindler (2016) <arXiv:1603.01700>.
   license_family: MIT
   license_file: LICENSE
 
