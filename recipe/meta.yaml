@@ -1,6 +1,5 @@
 {% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-hdm
@@ -13,8 +12,7 @@ source:
   sha256: 3354b22752f0aa0c0d9c8c12b38810202b6380f2587e539be11d9a358412fe6a
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
